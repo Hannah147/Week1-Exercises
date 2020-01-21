@@ -20,6 +20,7 @@ namespace Week1_Exercies
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Band> allBands = new List<Band>();
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +28,58 @@ namespace Week1_Exercies
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            Band band1 = new Band()
+            {
+                BandName = "dtyhg",
+                YearFormed = 0,
+                Members = ""
+            };
+
+            Band band2 = new Band()
+            {
+                BandName = "ctyjygf",
+                YearFormed = 0,
+                Members = ""
+            };
+
+            Band band3 = new Band()
+            {
+                BandName = "ayutdj",
+                YearFormed = 0,
+                Members = ""
+            };
+
+            Band band4 = new Band()
+            {
+                BandName = "bytjhey",
+                YearFormed = 0,
+                Members = ""
+            };
+
+            Band band5 = new Band()
+            {
+                BandName = "eyuteu",
+                YearFormed = 0,
+                Members = ""
+            };
+
+            Band band6 = new Band()
+            {
+                BandName = "yte",
+                YearFormed = 0,
+                Members = ""
+            };
+
+            allBands.Add(band1);
+            allBands.Add(band2);
+            allBands.Add(band3);
+            allBands.Add(band4);
+            allBands.Add(band5);
+            allBands.Add(band6);
+
+            allBands.Sort();
+
+            lbxBands.ItemsSource = allBands;
         }
     }
 }

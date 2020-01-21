@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Week1_Exercises
+namespace Week1_Exercies
 {
-    public class Band
+    public class Band : IComparable
     {
         public string BandName { get; set; }
         public int YearFormed { get; set; }
@@ -22,6 +22,18 @@ namespace Week1_Exercises
             BandName = bandName;
             YearFormed = yearFormed;
             Members = members;
+        }
+
+        public override string ToString()
+        {
+            return $"{BandName}";
+        }
+
+        public int CompareTo(object obj)
+        {
+            Band objectCompare = obj as Band;
+            int returnValue = this.BandName.CompareTo(objectCompare.BandName);
+            return returnValue;
         }
     }
 }
