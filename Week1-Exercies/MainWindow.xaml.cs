@@ -28,47 +28,48 @@ namespace Week1_Exercies
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Band band1 = new Band()
+            RockBand band1 = new RockBand()
             {
                 BandName = "dtyhg",
                 YearFormed = 0,
                 Members = ""
             };
 
-            Band band2 = new Band()
+            RockBand band2 = new RockBand()
             {
                 BandName = "ctyjygf",
                 YearFormed = 0,
                 Members = ""
             };
 
-            Band band3 = new Band()
+            PopBand band3 = new PopBand()
             {
                 BandName = "ayutdj",
                 YearFormed = 0,
                 Members = ""
             };
 
-            Band band4 = new Band()
+            PopBand band4 = new PopBand()
             {
                 BandName = "bytjhey",
                 YearFormed = 0,
                 Members = ""
             };
 
-            Band band5 = new Band()
+            IndieBand band5 = new IndieBand()
             {
                 BandName = "eyuteu",
                 YearFormed = 0,
                 Members = ""
             };
 
-            Band band6 = new Band()
+            IndieBand band6 = new IndieBand()
             {
                 BandName = "yte",
                 YearFormed = 0,
                 Members = ""
             };
+
 
             allBands.Add(band1);
             allBands.Add(band2);

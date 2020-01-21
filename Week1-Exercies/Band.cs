@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Week1_Exercies
 {
-    public class Band : IComparable
+    public abstract class Band : IComparable
     {
         public string BandName { get; set; }
         public int YearFormed { get; set; }
@@ -34,6 +34,44 @@ namespace Week1_Exercies
             Band objectCompare = obj as Band;
             int returnValue = this.BandName.CompareTo(objectCompare.BandName);
             return returnValue;
+        }
+    }
+
+    public class RockBand : Band
+    {
+        private string bandGenre;
+        public string BandGenre
+        {
+            get { return bandGenre; }
+            set
+            {
+                bandGenre = "Rock";
+            }
+        }
+
+        public override string ToString()
+        {
+            return $"{BandName} \t\t {BandGenre}";
+        }
+    }
+
+    public class PopBand : Band
+    {
+        public string BandGenre { get; set; }
+
+        public override string ToString()
+        {
+            return $"{BandName} \t\t {BandGenre}";
+        }
+    }
+
+    public class IndieBand : Band
+    {
+        public string BandGenre { get; set; }
+
+        public override string ToString()
+        {
+            return $"{BandName} \t\t {BandGenre}";
         }
     }
 }
