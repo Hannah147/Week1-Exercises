@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Week1_Exercies
+namespace Week1_Exercises
 {
     class Band
     {
