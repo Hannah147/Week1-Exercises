@@ -11,6 +11,7 @@ namespace Week1_Exercies
         public string BandName { get; set; }
         public int YearFormed { get; set; }
         public string Members { get; set; }
+        public Album[] Albums { get; set; }
 
         public Band():this("Unknown", 0, "Unknown")
         {
@@ -39,7 +40,7 @@ namespace Week1_Exercies
 
     public class RockBand : Band
     {
-        private string bandGenre;
+        /*private string bandGenre;
         public string BandGenre
         {
             get { return bandGenre; }
@@ -52,6 +53,11 @@ namespace Week1_Exercies
         public override string ToString()
         {
             return $"{BandName} \t\t {BandGenre}";
+        }*/
+
+        public RockBand()
+        {
+            Albums = new Album[10];
         }
     }
 

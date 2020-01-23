@@ -82,5 +82,11 @@ namespace Week1_Exercies
 
             lbxBands.ItemsSource = allBands;
         }
+
+        private void LbxBands_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            tblkBandInfo.Text = $"Formed : \n" +
+                $"Members : ";
+        }
     }
 }
