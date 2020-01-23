@@ -28,7 +28,7 @@ namespace Week1_Exercies
 
         public override string ToString()
         {
-            return $"{BandName}";
+            return string.Format($"{BandName}");
         }
 
         public int CompareTo(object obj)

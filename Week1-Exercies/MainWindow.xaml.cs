@@ -32,14 +32,14 @@ namespace Week1_Exercies
         {
             RockBand band1 = new RockBand()
             {
-                BandName = "dtyhg",
+                BandName = "Fleetwood Mac",
                 YearFormed = 0,
                 Members = "ghjk"
             };
 
             RockBand band2 = new RockBand()
             {
-                BandName = "ctyjygf",
+                BandName = "The Rolling Stones",
                 YearFormed = 0,
                 Members = "hjgh"
                 
@@ -47,28 +47,28 @@ namespace Week1_Exercies
 
             PopBand band3 = new PopBand()
             {
-                BandName = "ayutdj",
+                BandName = "The Beatles",
                 YearFormed = 0,
                 Members = ""
             };
 
             PopBand band4 = new PopBand()
             {
-                BandName = "bytjhey",
+                BandName = "Westlife",
                 YearFormed = 0,
                 Members = ""
             };
 
             IndieBand band5 = new IndieBand()
             {
-                BandName = "eyuteu",
+                BandName = "Arctic Monkeys",
                 YearFormed = 0,
                 Members = ""
             };
 
             IndieBand band6 = new IndieBand()
             {
-                BandName = "yte",
+                BandName = "The Killers",
                 YearFormed = 0,
                 Members = ""
             };
@@ -99,8 +99,16 @@ namespace Week1_Exercies
         private void CbxGenre_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string selectedGenre = cbxGenre.SelectedItem as string;
+            Band selectedBand = lbxBands.SelectedItem as Band;
 
-            if(selectedGenre.Ban)
+            if(selectedGenre == selectedBand.BandGenre)
+            {
+                filteredBands.Add(selectedBand);
+            }
+
+            lbxBands.ItemsSource = filteredBands;
+
+            
         }
     }
-}
+    }
