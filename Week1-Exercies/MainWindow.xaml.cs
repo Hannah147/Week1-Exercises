@@ -20,7 +20,9 @@ namespace Week1_Exercies
     /// </summary>
     public partial class MainWindow : Window
     {
+        static Random r = new Random();
         List<Band> allBands = new List<Band>();
+        List<Band> filteredBands = new List<Band>();
         public MainWindow()
         {
             InitializeComponent();
@@ -32,14 +34,15 @@ namespace Week1_Exercies
             {
                 BandName = "dtyhg",
                 YearFormed = 0,
-                Members = ""
+                Members = "ghjk"
             };
 
             RockBand band2 = new RockBand()
             {
                 BandName = "ctyjygf",
                 YearFormed = 0,
-                Members = ""
+                Members = "hjgh"
+                
             };
 
             PopBand band3 = new PopBand()
@@ -81,12 +84,23 @@ namespace Week1_Exercies
             allBands.Sort();
 
             lbxBands.ItemsSource = allBands;
+
+            cbxGenre.ItemsSource = new string[] { "Rock", "Pop", "Indie" };
+            cbxGenre.SelectedIndex = 0;
         }
 
         private void LbxBands_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            tblkBandInfo.Text = $"Formed : \n" +
-                $"Members : ";
+            Band selectedBand = lbxBands.SelectedItem as Band;
+            tblkBandInfo.Text = $"Formed : {selectedBand.YearFormed}\n" +
+                $"Members : {selectedBand.Members}";
+        }
+
+        private void CbxGenre_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string selectedGenre = cbxGenre.SelectedItem as string;
+
+            if(selectedGenre.Ban)
         }
     }
 }

@@ -12,13 +12,14 @@ namespace Week1_Exercies
         public int YearFormed { get; set; }
         public string Members { get; set; }
         public Album[] Albums { get; set; }
+        public string BandGenre { get; set; }
 
-        public Band():this("Unknown", 0, "Unknown")
+        public Band():this("Unknown", 0, "Unknown", "Unknown")
         {
 
         }
 
-        public Band(string bandName, int yearFormed, string members)
+        public Band(string bandName, int yearFormed, string members, string bandGenre)
         {
             BandName = bandName;
             YearFormed = yearFormed;
@@ -40,20 +41,10 @@ namespace Week1_Exercies
 
     public class RockBand : Band
     {
-        /*private string bandGenre;
-        public string BandGenre
-        {
-            get { return bandGenre; }
-            set
-            {
-                bandGenre = "Rock";
-            }
-        }
-
         public override string ToString()
         {
-            return $"{BandName} \t\t {BandGenre}";
-        }*/
+            return (this.BandName + " - Rock");
+        }
 
         public RockBand()
         {
@@ -63,21 +54,27 @@ namespace Week1_Exercies
 
     public class PopBand : Band
     {
-        public string BandGenre { get; set; }
+        public PopBand()
+        {
+            Albums = new Album[10];
+        }
 
         public override string ToString()
         {
-            return $"{BandName} \t\t {BandGenre}";
+            return (this.BandName + " - Pop");
         }
     }
 
     public class IndieBand : Band
     {
-        public string BandGenre { get; set; }
-
         public override string ToString()
         {
-            return $"{BandName} \t\t {BandGenre}";
+            return (this.BandName + " - Indie");
+        }
+
+        public IndieBand()
+        {
+            Albums = new Album[10];
         }
     }
 }
